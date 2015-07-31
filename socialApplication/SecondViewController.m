@@ -10,8 +10,11 @@
 #import "Flickr.h"
 #import "FlickrPhoto.h"
 #import "FlickrPhotoCell.h"
+#import "flickrImageClick.h"
 @interface SecondViewController ()
-
+{
+    NSArray *image;
+}
 @property(nonatomic, strong) NSMutableDictionary *searchResults;
 @property(nonatomic, strong) NSMutableArray *searches;
 @property(nonatomic, strong) Flickr *flickr;
@@ -98,4 +101,16 @@
 (UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
     return UIEdgeInsetsMake(10, 10, 10, 10);            //managing spacing around the cell
 }
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"imageClicked"])
+    {
+        NSArray *indexPaths=[self.collectionView indexPathsForSelectedItems];
+        flickrImageClick *imageSelected=segue.destinationViewController;
+        NSIndexPath *path=[indexPaths objectAtIndex:0];
+        imageSelected.collect=[image objectAtIndex:path.row];
+    }
+}
+
 @end

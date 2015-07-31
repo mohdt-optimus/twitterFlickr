@@ -60,6 +60,7 @@
                                         </view>
                                         <connections>
                                             <outlet property="imageView" destination="dYD-uV-o9D" id="Ku7-r4-RRD"/>
+                                            <segue destination="Eg7-Vr-vke" kind="show" identifier="imageClicked" id="N8c-hX-q1h"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -103,6 +104,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="750" y="360"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="sh2-tv-kY0">
+            <objects>
+                <viewController id="Eg7-Vr-vke" customClass="flickrImageClick" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="30d-8v-9AB"/>
+                        <viewControllerLayoutGuide type="bottom" id="QD7-6a-RWV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AVV-0R-6D6">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lW6-en-DHt">
+                                <rect key="frame" x="186" y="133" width="228" height="282"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8fR-KH-90z">
+                                <rect key="frame" x="256" y="433" width="89" height="30"/>
+                                <state key="normal" title="Save Image">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="NvR-9y-Szw"/>
+                    <connections>
+                        <outlet property="imageShow" destination="lW6-en-DHt" id="8pT-Ji-fak"/>
+                        <outlet property="saveButton" destination="8fR-KH-90z" id="NQc-Cl-j0m"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Cl-Hv-07d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1480" y="360"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">

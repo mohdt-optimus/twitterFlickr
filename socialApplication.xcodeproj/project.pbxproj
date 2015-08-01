@@ -41,6 +41,7 @@
 		DB5C78111B69FF0200399223 /* FlickrPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5C780F1B69FF0200399223 /* FlickrPhoto.m */; };
 		DB5C781A1B6A333700399223 /* FlickrPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5C78191B6A333700399223 /* FlickrPhotoCell.m */; };
 		DB5C781E1B6A5B0900399223 /* flickrImageClick.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5C781D1B6A5B0900399223 /* flickrImageClick.m */; };
+		DBD6AC391B6CF3C100584C77 /* TweetsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD6AC381B6CF3C100584C77 /* TweetsDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,8 @@
 		DB5C78191B6A333700399223 /* FlickrPhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrPhotoCell.m; sourceTree = "<group>"; };
 		DB5C781C1B6A5B0900399223 /* flickrImageClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = flickrImageClick.h; sourceTree = "<group>"; };
 		DB5C781D1B6A5B0900399223 /* flickrImageClick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = flickrImageClick.m; sourceTree = "<group>"; };
+		DBD6AC371B6CF3C100584C77 /* TweetsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetsDetailViewController.h; sourceTree = "<group>"; };
+		DBD6AC381B6CF3C100584C77 /* TweetsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetsDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +156,8 @@
 				DB5C778A1B69D79800399223 /* Images.xcassets */,
 				DB5C778C1B69D79800399223 /* LaunchScreen.xib */,
 				DB5C777A1B69D79800399223 /* Supporting Files */,
+				DBD6AC371B6CF3C100584C77 /* TweetsDetailViewController.h */,
+				DBD6AC381B6CF3C100584C77 /* TweetsDetailViewController.m */,
 			);
 			path = socialApplication;
 			sourceTree = "<group>";
@@ -364,6 +369,7 @@
 				DB5C78111B69FF0200399223 /* FlickrPhoto.m in Sources */,
 				DB5C77831B69D79800399223 /* FirstViewController.m in Sources */,
 				DB5C777D1B69D79800399223 /* main.m in Sources */,
+				DBD6AC391B6CF3C100584C77 /* TweetsDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

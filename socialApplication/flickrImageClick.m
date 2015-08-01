@@ -10,10 +10,12 @@
 #include "SecondViewController.h"
 
 @implementation flickrImageClick
+@synthesize imageShow;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    _imageShow.image=[UIImage imageNamed:_collect];
-    NSLog(@"%@",_imageShow.image);
+    imageShow.image=[UIImage imageNamed:_collect];
+  //  NSString *name=
+   // NSLog(@"%@",imageShow);
 }
 @end

@@ -10,7 +10,9 @@
 #import <Accounts/Accounts.h>
 #import <Twitter/Twitter.h>
 
-@interface FirstViewController : UIViewController
+@interface FirstViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *showTweets;
+@property (strong, nonatomic) NSArray *tweetsarray;
 
 @end
 

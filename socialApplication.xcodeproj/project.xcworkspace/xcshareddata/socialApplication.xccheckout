@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>81FBFD30-A632-42A0-824A-7444C58FF7AD</string>
+	<key>IDESourceControlProjectName</key>
+	<string>socialApplication</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C8E466B392B7F79A71FA42F8CC5470C28EF01DAE</key>
+		<string>https://github.com/mohdt-optimus/twitterFlickr.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>socialApplication.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C8E466B392B7F79A71FA42F8CC5470C28EF01DAE</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/mohdt-optimus/twitterFlickr.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C8E466B392B7F79A71FA42F8CC5470C28EF01DAE</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C8E466B392B7F79A71FA42F8CC5470C28EF01DAE</string>
+			<key>IDESourceControlWCCName</key>
+			<string>twitterFlickr</string>
+		</dict>
+	</array>
+</dict>
+</plist>

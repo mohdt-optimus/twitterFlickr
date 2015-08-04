@@ -41,7 +41,7 @@
 		DB5C78111B69FF0200399223 /* FlickrPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5C780F1B69FF0200399223 /* FlickrPhoto.m */; };
 		DB5C781A1B6A333700399223 /* FlickrPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5C78191B6A333700399223 /* FlickrPhotoCell.m */; };
 		DB5C781E1B6A5B0900399223 /* flickrImageClick.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5C781D1B6A5B0900399223 /* flickrImageClick.m */; };
-		DBD6AC391B6CF3C100584C77 /* TweetsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD6AC381B6CF3C100584C77 /* TweetsDetailViewController.m */; };
+		DB9094351B709F7100C575EE /* TweetViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9094341B709F7100C575EE /* TweetViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,8 +100,8 @@
 		DB5C78191B6A333700399223 /* FlickrPhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrPhotoCell.m; sourceTree = "<group>"; };
 		DB5C781C1B6A5B0900399223 /* flickrImageClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = flickrImageClick.h; sourceTree = "<group>"; };
 		DB5C781D1B6A5B0900399223 /* flickrImageClick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = flickrImageClick.m; sourceTree = "<group>"; };
-		DBD6AC371B6CF3C100584C77 /* TweetsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetsDetailViewController.h; sourceTree = "<group>"; };
-		DBD6AC381B6CF3C100584C77 /* TweetsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetsDetailViewController.m; sourceTree = "<group>"; };
+		DB9094331B709F7100C575EE /* TweetViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetViewCell.h; sourceTree = "<group>"; };
+		DB9094341B709F7100C575EE /* TweetViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,18 +146,15 @@
 		DB5C77791B69D79800399223 /* socialApplication */ = {
 			isa = PBXGroup;
 			children = (
+				DB9094321B709D9300C575EE /* Twitter */,
 				DB5C781B1B6A580200399223 /* Flickr */,
 				DB5C77E31B69FCCE00399223 /* Assets */,
 				DB5C777E1B69D79800399223 /* AppDelegate.h */,
 				DB5C777F1B69D79800399223 /* AppDelegate.m */,
-				DB5C77811B69D79800399223 /* FirstViewController.h */,
-				DB5C77821B69D79800399223 /* FirstViewController.m */,
 				DB5C77871B69D79800399223 /* Main.storyboard */,
 				DB5C778A1B69D79800399223 /* Images.xcassets */,
 				DB5C778C1B69D79800399223 /* LaunchScreen.xib */,
 				DB5C777A1B69D79800399223 /* Supporting Files */,
-				DBD6AC371B6CF3C100584C77 /* TweetsDetailViewController.h */,
-				DBD6AC381B6CF3C100584C77 /* TweetsDetailViewController.m */,
 			);
 			path = socialApplication;
 			sourceTree = "<group>";
@@ -239,6 +236,17 @@
 				DB5C781D1B6A5B0900399223 /* flickrImageClick.m */,
 			);
 			name = Flickr;
+			sourceTree = "<group>";
+		};
+		DB9094321B709D9300C575EE /* Twitter */ = {
+			isa = PBXGroup;
+			children = (
+				DB9094331B709F7100C575EE /* TweetViewCell.h */,
+				DB9094341B709F7100C575EE /* TweetViewCell.m */,
+				DB5C77811B69D79800399223 /* FirstViewController.h */,
+				DB5C77821B69D79800399223 /* FirstViewController.m */,
+			);
+			name = Twitter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,6 +369,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB9094351B709F7100C575EE /* TweetViewCell.m in Sources */,
 				DB5C781A1B6A333700399223 /* FlickrPhotoCell.m in Sources */,
 				DB5C781E1B6A5B0900399223 /* flickrImageClick.m in Sources */,
 				DB5C78101B69FF0200399223 /* Flickr.m in Sources */,
@@ -369,7 +378,6 @@
 				DB5C78111B69FF0200399223 /* FlickrPhoto.m in Sources */,
 				DB5C77831B69D79800399223 /* FirstViewController.m in Sources */,
 				DB5C777D1B69D79800399223 /* main.m in Sources */,
-				DBD6AC391B6CF3C100584C77 /* TweetsDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,6 +502,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = socialApplication/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -504,6 +513,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = socialApplication/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

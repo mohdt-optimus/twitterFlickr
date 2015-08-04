@@ -7,7 +7,7 @@
 //
 
 #import "FirstViewController.h"
-
+#import "TweetViewCell.h"
 @interface FirstViewController ()
 
 @end
@@ -17,7 +17,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.showTweets.estimatedRowHeight = 89;
+    self.showTweets.rowHeight = UITableViewAutomaticDimension;
     [self fetchTweets];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -47,7 +50,7 @@
                  
                  NSMutableDictionary *parameters =
                  [[NSMutableDictionary alloc] init];
-                 [parameters setObject:@"100" forKey:@"count"];
+                 [parameters setObject:@"25" forKey:@"count"];
                  [parameters setObject:@"1" forKey:@"include_entities"];
                  
                  SLRequest *postRequest = [SLRequest
@@ -74,6 +77,7 @@
                   }];
              }
          } else {
+             NSLog(@"Error Occured");
              // Handle failure to get account access
          }
      }];
@@ -87,19 +91,27 @@
     
     static NSString *CellIdentifier = @"Cell";
     
-    UITableViewCell *cell = [self.showTweets
+    TweetViewCell *cell = (TweetViewCell *)[self.showTweets
                              dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if (cell == nil) {
-        cell = [[UITableViewCell alloc]
+        cell = [[TweetViewCell alloc]
                 initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
     NSDictionary *tweet = _tweetsarray[[indexPath row]];
+    NSDictionary *userinfo=[tweet objectForKey:@"user"];
     
-    cell.textLabel.text = tweet[@"text"];
-    
+    cell.titleTweet.text=userinfo[@"name"];
    
+    
+    cell.dataTweet.text=tweet[@"text"];
+    
+    NSString *imageInfo=userinfo[@"profile_image_url"];
+    
+    UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:imageInfo]]];
+    cell.imageTweet.image =image;
+    
     return cell;
 }
 

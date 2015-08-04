@@ -15,7 +15,7 @@
 {
     NSArray *image;
 }
-@property(nonatomic, strong) NSMutableDictionary *searchResults;
+@property(nonatomic, strong) NSMutableArray *searchResults;
 @property(nonatomic, strong) NSMutableArray *searches;
 @property(nonatomic, strong) Flickr *flickr;
 
@@ -45,7 +45,7 @@
             if(![self.searches containsObject:searchTerm])       //if the key was not searched before then it will be added to searches array
             {
                [self.searches insertObject:searchTerm atIndex:0];
-                self.searchResults[searchTerm] = results;
+                self.searchResults = results;
             }
         
             dispatch_async(dispatch_get_main_queue(), ^         //images are fetched from flickr, so now reloading the collection to
@@ -68,7 +68,7 @@
 - (NSInteger)collectionView:(UICollectionView *)view numberOfItemsInSection:(NSInteger)section
 {                       //tells the number of sections to be returned for data to be displayed
     NSString *searchTerm = self.searches[section];                      //fetching search key from search array
-    return [self.searchResults[searchTerm] count];                      //now looking for the sarch key in dictionary
+    return [self.searchResults count];                      //now looking for the sarch key in dictionary
 }
 
 - (NSInteger)numberOfSectionsInCollectionView: (UICollectionView *)collectionView
@@ -81,7 +81,7 @@
     
     FlickrPhotoCell *cell = [cv dequeueReusableCellWithReuseIdentifier:@"FlickrCell" forIndexPath:indexPath];
     NSString *searchTerm = self.searches[indexPath.section];
-    cell.photo = self.searchResults[searchTerm]
+    cell.photo = self.searchResults
     [indexPath.row];
     return cell;    
 }
@@ -92,7 +92,7 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath                        //different images has different size so changing the size of cell accordingly
 {
     NSString *searchTerm = self.searches[indexPath.section];
-    FlickrPhoto *photo =self.searchResults[searchTerm][indexPath.row];
+    FlickrPhoto *photo =self.searchResults[indexPath.row];
     CGSize retval = photo.thumbnail.size.width > 0 ? photo.thumbnail.size : CGSizeMake(100, 100);   //if obtained picture is of 0 size then showing a blank area of 100X100 size
     return retval;
 }
@@ -109,7 +109,7 @@
         NSArray *indexPaths=[self.collectionView indexPathsForSelectedItems];
         flickrImageClick *imageSelected=segue.destinationViewController;
         NSIndexPath *path=[indexPaths objectAtIndex:0];
-        imageSelected.collect=[image objectAtIndex:path.row];
+        imageSelected.collect=[self.searchResults objectAtIndex:path.row];
     }
 }
 
